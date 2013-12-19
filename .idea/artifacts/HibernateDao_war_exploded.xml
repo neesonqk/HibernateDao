@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="HibernateDao:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/HibernateDao_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="HibernateDao/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="HibernateDao" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
