@@ -10,6 +10,7 @@ import org.hibernate.criterion.Restrictions;
 import org.hibernatedao.assist.CndReturnType;
 import org.hibernatedao.assist.Condition;
 import org.hibernatedao.assist.Page;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
@@ -23,12 +24,14 @@ import java.util.List;
  * Created by Nesson on 12/19/13.
  */
 @Transactional
+@Component("dao")
 public class Dao {
 
     @Resource(name="sessionFactory")
     public SessionFactory sessionFactory;
 
     public Logger log = Logger.getLogger(this.getClass());
+
 
     /**
     * calculate total number's record of table
@@ -60,7 +63,7 @@ public class Dao {
     public <T> T fetch(Class<T> c, String name) {
         try{
             Field[] fields = c.getDeclaredFields();
-            List<String> rule = Arrays.asList("org.nutz.dao.entity.annotation.Name", "javax.persistence.Column");
+            List<String> rule = Arrays.asList("org.hibernatedao.annotation.Name", "javax.persistence.Column");
             for(Field f : fields){
                 Annotation[] annotations = f.getAnnotations();
                 List<String> anno_str = new ArrayList<String>();
@@ -117,27 +120,25 @@ public class Dao {
             sessionFactory.getCurrentSession().save(o);
             return true;
         }catch(HibernateException ex){
+            System.out.println(ex.toString());
             return false;
         }
     }
 
-    public <T> List<T> fetchList(Class<T> c, Page page){
-        return this.fetchList(c, page, new Condition[0]);
+    public <T> List<T> query(Class<T> c, Page page){
+        return this.query(c, page, new Condition[0]);
     }
 
-    //fetchList不同的实现
-    public <T> List<T> fetchList(Class<T> c){
-        return this.fetchList(c, null, new Condition[0]);
+    public <T> List<T> query(Class<T> c){
+        return this.query(c, null, new Condition[0]);
     }
 
-    //fetchList不同的实现
-    public <T> List<T> fetchList(Class<T> c, Condition... cnd){
-        return this.fetchList(c, null, cnd);
+    public <T> List<T> query(Class<T> c, Condition... cnd){
+        return this.query(c, null, cnd);
     }
 
-    //简单的封装获取列表 只能指定一个条件
     @SuppressWarnings("unchecked")
-    public <T> List<T> fetchList(Class<T> c, Page page, Condition... cnds){
+    public <T> List<T> query(Class<T> c, Page page, Condition... cnds){
         try {
 
             Criteria cri = sessionFactory.getCurrentSession().createCriteria(c);
@@ -171,12 +172,26 @@ public class Dao {
         }
     }
 
-    //Condition中的条件强制为 ‘=’
+    /**
+     * delete table content
+     */
+    public <T> boolean clear(Class<T> c){
+        try{
+            String sql = String.format("delete %s", c.getName());
+            Query query = sessionFactory.getCurrentSession().createQuery(sql);
+            query.executeUpdate();
+            return true;
+        }catch (HibernateException hex){
+            return false;
+        }
+    }
+
+    //Condition ‘=’
     @SuppressWarnings("unchecked")
-    public <T> T fetch(Class<T> c, Condition... cndl){
+    public <T> T fetch(Class<T> c, Condition... cnds){
         try{
             Criteria cri = sessionFactory.getCurrentSession().createCriteria(c);
-            for(Condition cnd :cndl)
+            for(Condition cnd :cnds)
                 cri.add(Restrictions.eq(cnd.restriction_colo, cnd.restriction_value));
             return (T) cri.uniqueResult();
         }catch(HibernateException hex){
