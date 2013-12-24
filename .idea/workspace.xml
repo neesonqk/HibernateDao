@@ -7,11 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e04af284-494b-4593-81fc-27be8abe6b7c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/hibernate_dao.xml" />
-      <change type="DELETED" beforePath="C:\Users\Nesson\Documents\HibernateDao\.idea\artifacts\HibernateDao.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hibernatedao/core/Dao.java" afterPath="$PROJECT_DIR$/src/org/hibernatedao/core/Dao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hibernatedao/test/MainModule.java" afterPath="$PROJECT_DIR$/src/org/hibernatedao/test/MainModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HibernateDao.iws" />
@@ -593,12 +588,12 @@
       <workItem from="1387489816451" duration="7950000" />
       <workItem from="1387822107942" duration="961000" />
       <workItem from="1387825309952" duration="25000" />
-      <workItem from="1387893845421" duration="1531000" />
+      <workItem from="1387893845421" duration="1720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17996000" />
+    <option name="totallyTimeSpent" value="18185000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-41" y="0" width="1932" height="1064" extended-state="0" />
