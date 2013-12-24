@@ -39,6 +39,12 @@ public class MainModule {
     }
 
     @ResponseBody
+    @RequestMapping("/count")
+    public String count(){
+        return dao.count(Pet.class).toString();
+    }
+
+    @ResponseBody
     @RequestMapping("/clear")
     public String clear(){
         dao.clear(Pet.class);

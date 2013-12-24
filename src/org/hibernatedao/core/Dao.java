@@ -32,12 +32,11 @@ public class Dao {
 
     public Logger log = Logger.getLogger(this.getClass());
 
-
     /**
     * calculate total number's record of table
     */
     public Number count(Class<?> c){
-        return (Number)sessionFactory.getCurrentSession().createCriteria(c).setProjection(Projections.rowCount()).uniqueResult();
+      return count(c, new Condition[0]);
     }
 
     /**
