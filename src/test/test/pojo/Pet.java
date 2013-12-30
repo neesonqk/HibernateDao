@@ -1,4 +1,4 @@
-package org.hibernatedao.pojo;
+package test.test.pojo;
 
 import org.hibernatedao.annotation.Name;
 

@@ -1,8 +1,8 @@
-package org.hibernatedao.test;
+package test.test;
 
 import org.hibernatedao.assist.Condition;
 import org.hibernatedao.core.Dao;
-import org.hibernatedao.pojo.Pet;
+import test.test.pojo.Pet;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -25,7 +25,7 @@
 
 	<!-- Database configuration sessionFactory-->
     <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
-        <property name="packagesToScan" value="org.hibernatedao.pojo" />
+        <property name="packagesToScan" value="test.test.pojo" />
         <property name="dataSource" ref="dataSource"/>
         <property name="hibernateProperties">
             <props>

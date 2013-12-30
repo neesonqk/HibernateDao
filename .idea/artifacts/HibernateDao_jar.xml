@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HibernateDao:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/HibernateDao_jar</output-path>
+    <root id="archive" name="HibernateDao.jar">
+      <element id="module-output" name="HibernateDao" />
+    </root>
+  </artifact>
+</component>
