@@ -12,6 +12,8 @@ public class Condition {
 	private String restriction_cnd = null;
 	
 	public Object restriction_value = null;
+
+    private boolean asc = true;
 	
 	public Condition(){}
 	
@@ -21,20 +23,27 @@ public class Condition {
 		this.restriction_value = value;
 	}
 
-	public Condition desc(String colo){
-		this.order_colo = colo;
-		return this;
-	}
-	
-	public Order getOrder(){
-		return this.order_colo == null ? null : Order.desc(this.order_colo);
-	}
-	
-	public CndReturnType getRestrications(){
+    public Condition desc(String colo){
+        this.order_colo = colo;
+        asc = false;
+        return this;
+    }
+
+    public Condition asc(String colo){
+        this.order_colo = colo;
+        asc = true;
+        return this;
+    }
+
+    public Order getOrder(){
+        return this.order_colo == null ? null :
+                asc ? Order.asc(this.order_colo) : Order.desc(this.order_colo);
+    }
+
+    public CndReturnType getRestrications(){
 	
 		CndReturnType crt = new CndReturnType();
-		
-		//修复一个bug，如果不判断null值， 那么当没有限制条件传入的时候，因为restriction_cnd默认是null，就会抛出null异常
+
 		if(this.restriction_cnd == null) return crt;
 		
 		switch(this.restriction_cnd){
@@ -45,6 +54,10 @@ public class Condition {
 			crt.simpleExpression = Restrictions.gt(this.restriction_colo, this.restriction_value);
 			break;
 		case "=" :
+            if(this.restriction_value == null) {
+                crt.criterion = Restrictions.isNull(this.restriction_colo);
+                break;
+            }
 			crt.simpleExpression = Restrictions.eq(this.restriction_colo, this.restriction_value);
 			break;
 		case "<" :
@@ -54,6 +67,10 @@ public class Condition {
 			crt.simpleExpression = Restrictions.le(this.restriction_colo, this.restriction_value);
 			break;
 		case "!=" :
+            if(this.restriction_value == null) {
+                crt.criterion = Restrictions.isNotNull(this.restriction_colo);
+                break;
+            }
 			crt.criterion = Restrictions.not(Restrictions.eq(this.restriction_colo, this.restriction_value));
 			break;
 		default:

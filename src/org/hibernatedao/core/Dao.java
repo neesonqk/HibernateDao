@@ -30,7 +30,11 @@ public class Dao {
     @Resource(name="sessionFactory")
     public SessionFactory sessionFactory;
 
-    public Logger log = Logger.getLogger(this.getClass());
+    protected Dao dao;
+
+    public Dao(){
+        dao = this;
+    }
 
     /**
     * calculate total number's record of table
@@ -57,6 +61,10 @@ public class Dao {
         return (T) this.sessionFactory.getCurrentSession().get(c, id);
     }
 
+    public <T> T fetch(Class<T> c, long id){
+        return (T) this.sessionFactory.getCurrentSession().get(c, id);
+    }
+
     //@Name  @Column(unique = true)
     @SuppressWarnings("unchecked")
     public <T> T fetch(Class<T> c, String name) {
@@ -78,7 +86,6 @@ public class Dao {
                 }
             }
         }catch(Exception ex){
-            log.error(ex.toString());
             return null;
         }
         return null;
@@ -90,7 +97,6 @@ public class Dao {
             sessionFactory.getCurrentSession().delete(toBeDeletedObj);
             return true;
         }catch(HibernateException ex){
-            log.error(ex.toString());
             return false;
         }
     }
@@ -100,9 +106,35 @@ public class Dao {
             sessionFactory.getCurrentSession().delete(o);
             return true;
         }catch(HibernateException ex){
-            log.error(ex.toString());
             return false;
         }
+    }
+
+    public <T> boolean delete(Class<T> c, Long id){
+        try{
+            T toBeDeletedObj = this.fetch(c, id);
+            sessionFactory.getCurrentSession().delete(toBeDeletedObj);
+            return true;
+        }catch(HibernateException ex){
+            return false;
+        }
+    }
+
+    public <T> boolean delete(Class<T> c, Integer id){
+        try{
+            T toBeDeletedObj = this.fetch(c, id);
+            sessionFactory.getCurrentSession().delete(toBeDeletedObj);
+            return true;
+        }catch(HibernateException ex){
+            return false;
+        }
+    }
+
+    public <T> boolean delete(List<T> lists){
+        for(T t : lists){
+            sessionFactory.getCurrentSession().delete(t);
+        }
+        return true;
     }
 
     public boolean update(Object o){
@@ -165,8 +197,6 @@ public class Dao {
             return cri.list();
 
         }catch(HibernateException hex){
-            log.error(hex.toString());
-            System.out.println(hex.toString());
             return null;
         }
     }
@@ -194,7 +224,6 @@ public class Dao {
                 cri.add(Restrictions.eq(cnd.restriction_colo, cnd.restriction_value));
             return (T) cri.uniqueResult();
         }catch(HibernateException hex){
-            log.error(hex.toString());
             return null;
         }
     }
