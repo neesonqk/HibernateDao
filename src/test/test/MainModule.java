@@ -1,12 +1,13 @@
 package test.test;
 
+import org.hibernatedao.assist.Cnd;
 import org.hibernatedao.assist.Condition;
 import org.hibernatedao.core.Dao;
-import test.test.pojo.Pet;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import test.test.pojo.Pet;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -19,60 +20,34 @@ import java.util.List;
 @Controller
 public class MainModule {
 
-    @Resource(name="dao")
+    @Resource(name = "dao")
     Dao dao;
 
-    @ResponseBody
-    @RequestMapping({"/create", "/"})
-    public String create(){
+    @RequestMapping({"/create", "/", "/index"})
+    public @ResponseBody String Test() {
 
-        for(int i = 0; i < 100; i ++){
+        Condition c = Cnd.where("id", ">", 250).desc("id");
 
-            Pet pet = new Pet();
+        //List<Pet> pets = dao.query(Pet.class, c);
 
-            pet.setName(Integer.toString(i));
+        //Pet pet = dao.fetch(Pet.class, Cnd.where("id", ">", 250).and("name", "=", "99"));
 
-            dao.insert(pet);
-        }
+        List<Pet> pets1 = dao.query(Pet.class, Cnd.where("id", ">", 250).or("id", "<", 170).or("name","=","15").and("name","=","99"));
+
+        List<Pet> pets2 = dao.query(Pet.class, Cnd.where("name", "like", "9%"));
+
+        List<Pet> pets3 = dao.query(Pet.class, Cnd.where("name", "not in", new String[]{}).desc("id"));
+
+        Condition condition = Cnd.where("id", ">", 200).and("id", "<", 220);
+
+        Condition condition1 = Cnd.where("id", ">", 250).and("id", "<", 260);
+
+        Condition condition2 = Cnd.where(condition).or(condition1);
+
+        List<Pet> pets = dao.query(Pet.class, condition2);
 
         return "success";
     }
 
-    @ResponseBody
-    @RequestMapping("/count")
-    public String count(){
-        return dao.count(Pet.class).toString();
-    }
-
-    @ResponseBody
-    @RequestMapping("/clear")
-    public String clear(){
-        dao.clear(Pet.class);
-        return "success";
-    }
-
-    @ResponseBody
-    @RequestMapping("/last")
-    public String lastPet(){
-        Condition cnd = new Condition().desc("id");
-        List<Pet> petList = dao.query(Pet.class, cnd);
-        return petList.get(petList.size()-1).getName();
-    }
-
-    @ResponseBody
-    @RequestMapping("/create+hummer")
-    public String createHummer(){
-        Pet pet = new Pet();
-        pet.setName("hummer");
-        dao.insert(pet);
-        return "success";
-    }
-
-    @ResponseBody
-    @RequestMapping("/hummer")
-    public String getPetByName(){
-        Pet pet = dao.fetch(Pet.class, "hummer");
-        return pet.getName()+ ", " + pet.getId();
-    }
 
 }
