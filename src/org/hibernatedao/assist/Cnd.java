@@ -245,5 +245,4 @@ public class Cnd implements Condition{
         messengers.clear();
     }
 
-
 }
