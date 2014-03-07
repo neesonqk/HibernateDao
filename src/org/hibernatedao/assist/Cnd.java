@@ -4,6 +4,8 @@ import org.hibernate.criterion.*;
 
 import java.util.*;
 
+import java.lang.Object;
+
 /**
  * Created by Nesson on 2/28/14.
  */
@@ -67,7 +69,7 @@ public class Cnd implements Condition{
         return this;
     }
 
-    public Cnd andNotIn(String column, Objects[] values){
+    public Cnd andNotIn(String column, Object[] values){
         messengers.add(wrapMessenger(column, "NOT IN", values));
         return this;
     }

@@ -4,6 +4,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Projections;
+import org.hibernatedao.annotation.Name;
 import org.hibernatedao.assist.Condition;
 import org.hibernatedao.assist.Messenger;
 import org.hibernatedao.assist.Page;
@@ -65,25 +66,14 @@ public class Dao {
 
         Field[] fields = c.getDeclaredFields();
 
-        List<String> rule = Arrays.asList("org.hibernatedao.annotation.Name", "javax.persistence.Column");
-
         for (Field f : fields) {
-
-            Annotation[] annotations = f.getAnnotations();
-            List<String> anno_str = new ArrayList<String>();
-
-            for (Annotation a : annotations) {
-                anno_str.add(a.annotationType().getName());
-            }
-
-            if (anno_str.containsAll(rule)) {
+           if(null != f.getAnnotation(Name.class)){
                 String sql = String.format("from %s where %s = ?", c.getName(), f.getName());
                 Query query = sessionFactory.getCurrentSession().createQuery(sql);
                 query.setString(0, name);
                 return (T) query.uniqueResult();
             }
         }
-
         return null;
     }
 

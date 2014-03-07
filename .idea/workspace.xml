@@ -3,7 +3,6 @@
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="HibernateDao:jar" />
-      <artifact name="HibernateDao:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
@@ -11,7 +10,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hibernatedao/assist/Cnd.java" afterPath="$PROJECT_DIR$/src/org/hibernatedao/assist/Cnd.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hibernatedao/core/Dao.java" afterPath="$PROJECT_DIR$/src/org/hibernatedao/core/Dao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test/MainModule.java" afterPath="$PROJECT_DIR$/src/test/test/MainModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test/pojo/Pet.java" afterPath="$PROJECT_DIR$/src/test/test/pojo/Pet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hibernatedao/annotation/Name.java" afterPath="$PROJECT_DIR$/src/org/hibernatedao/annotation/Name.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HibernateDao.iws" />
@@ -67,7 +66,23 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/test/test/MainModule.java" line="39" class="test.test.MainModule" package="test.test">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -77,11 +92,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Cnd.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Cnd.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/assist/Cnd.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="0" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.5020862" vertical-offset="479" max-vertical-offset="1860">
+            <state line="10" column="3" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1880">
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="docComment;class#Cnd#0" expanded="false" />
                 <element signature="method#clearCache#0;class#Cnd#0" expanded="false" />
                 <element signature="method#Cnd#1;class#Cnd#0" expanded="false" />
@@ -91,7 +107,8 @@
                 <element signature="method#where#3;class#Cnd#0" expanded="false" />
                 <element signature="method#where#4;class#Cnd#0" expanded="false" />
                 <element signature="method#where#5;class#Cnd#0" expanded="false" />
-                <element signature="method#and#0;class#Cnd#0" expanded="false" />
+                <element signature="method#andIn#0;class#Cnd#0" expanded="false" />
+                <element signature="method#andNotIn#0;class#Cnd#0" expanded="false" />
                 <element signature="method#and#1;class#Cnd#0" expanded="false" />
                 <element signature="method#and#2;class#Cnd#0" expanded="false" />
                 <element signature="method#and#3;class#Cnd#0" expanded="false" />
@@ -100,7 +117,7 @@
                 <element signature="method#orIn#0;class#Cnd#0" expanded="false" />
                 <element signature="method#orNotIn#0;class#Cnd#0" expanded="false" />
                 <element signature="method#repackMessengersForOr#0;class#Cnd#0" expanded="false" />
-                <element signature="e#4389#4444#0" expanded="false" />
+                <element signature="e#4414#4469#0" expanded="false" />
                 <element signature="method#or#2;class#Cnd#0" expanded="false" />
                 <element signature="method#or#3;class#Cnd#0" expanded="false" />
                 <element signature="method#asc#0;class#Cnd#0" expanded="false" />
@@ -119,10 +136,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainModule.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainModule.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/test/MainModule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="48" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0" vertical-offset="371" max-vertical-offset="940">
+            <state line="31" column="48" selection-start="820" selection-end="820" vertical-scroll-proportion="0.73963135" vertical-offset="299" max-vertical-offset="980">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,7 +150,45 @@
       <file leaf-file-name="Dao.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/core/Dao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="41" selection-start="766" selection-end="766" vertical-scroll-proportion="-7.275862" vertical-offset="29" max-vertical-offset="3140">
+            <state line="67" column="0" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="2920">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Name.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/annotation/Name.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="34" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/test/pojo/Pet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="26" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="820">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="14" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dispatcher-servlet.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="45" selection-start="1869" selection-end="1869" vertical-scroll-proportion="-15.2" vertical-offset="200" max-vertical-offset="1160">
               <folding />
             </state>
           </provider>
@@ -155,7 +210,6 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/spring-security.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/datasource.xml" />
         <option value="$PROJECT_DIR$/src/org/hibernatedao/assist/ClaimStructure.java" />
-        <option value="$PROJECT_DIR$/src/org/hibernatedao/annotation/Name.java" />
         <option value="$PROJECT_DIR$/src/org/hibernatedao/assist/Pagger.java" />
         <option value="$PROJECT_DIR$/src/org/hibernatedao/pojo/Pet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/sessionFactory.xml" />
@@ -173,10 +227,11 @@
         <option value="$PROJECT_DIR$/src/org/hibernatedao/assist/Messenger.java" />
         <option value="$PROJECT_DIR$/src/org/hibernatedao/assist/Condition.java" />
         <option value="$PROJECT_DIR$/src/org/hibernatedao/assist/CndTool.java" />
-        <option value="$PROJECT_DIR$/src/test/test/pojo/Pet.java" />
-        <option value="$PROJECT_DIR$/src/test/test/MainModule.java" />
-        <option value="$PROJECT_DIR$/src/org/hibernatedao/core/Dao.java" />
         <option value="$PROJECT_DIR$/src/org/hibernatedao/assist/Cnd.java" />
+        <option value="$PROJECT_DIR$/src/test/test/MainModule.java" />
+        <option value="$PROJECT_DIR$/src/org/hibernatedao/annotation/Name.java" />
+        <option value="$PROJECT_DIR$/src/test/test/pojo/Pet.java" />
+        <option value="$PROJECT_DIR$/src/org/hibernatedao/core/Dao.java" />
       </list>
     </option>
   </component>
@@ -188,10 +243,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1552" />
-    <option name="height" value="880" />
+    <option name="height" value="842" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -322,6 +377,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateDao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateDao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateDao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateDao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -367,6 +454,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -441,6 +532,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hibernatedao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="annotation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -827,12 +922,12 @@
       <workItem from="1393550640378" duration="4773000" />
       <workItem from="1393812417600" duration="7265000" />
       <workItem from="1393827366567" duration="11982000" />
-      <workItem from="1394156255799" duration="6075000" />
+      <workItem from="1394156255799" duration="13499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102391000" />
+    <option name="totallyTimeSpent" value="109815000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -855,7 +950,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1552" height="880" extended-state="0" />
+    <frame x="-8" y="-8" width="1552" height="842" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -867,13 +962,13 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32957748" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32676056" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34788734" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.06417112" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.061971832" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32957748" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -910,9 +1005,9 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.085365854" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32676056" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34788734" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.06478873" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.061971832" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -950,11 +1045,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="70" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="575" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/core/Dao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="0" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.0" vertical-offset="1025" max-vertical-offset="5200">
@@ -1146,11 +1236,6 @@
         <state line="33" column="0" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.74674386" vertical-offset="309" max-vertical-offset="1225" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/annotation/Name.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="8" selection-start="50" selection-end="50" vertical-scroll-proportion="0.07586207" vertical-offset="0" max-vertical-offset="870" />
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/hibernate3.6.10.jar!/org/hibernate/SessionFactory.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="17" selection-start="160" selection-end="160" vertical-scroll-proportion="0.14322917" vertical-offset="0" max-vertical-offset="2002" />
@@ -1159,18 +1244,6 @@
     <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/assist/Page.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="5" selection-start="849" selection-end="849" vertical-scroll-proportion="0.44242424" vertical-offset="419" max-vertical-offset="1034" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="14" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="30" selection-start="1203" selection-end="1203" vertical-scroll-proportion="0.0" vertical-offset="155" max-vertical-offset="1276">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/spring-tx.jar!/org/springframework/transaction/interceptor/TransactionInterceptor.class">
@@ -1196,13 +1269,6 @@
     <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/assist/CndTool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="430" selection-end="430" vertical-scroll-proportion="-0.15172414" vertical-offset="462" max-vertical-offset="3058">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/test/pojo/Pet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
           <folding />
         </state>
       </provider>
@@ -1235,22 +1301,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/test/MainModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="48" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0" vertical-offset="371" max-vertical-offset="940">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/core/Dao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="41" selection-start="766" selection-end="766" vertical-scroll-proportion="-7.275862" vertical-offset="29" max-vertical-offset="3140">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/assist/Messenger.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="30" selection-start="326" selection-end="326" vertical-scroll-proportion="0.3524229" vertical-offset="0" max-vertical-offset="681">
@@ -1258,10 +1308,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="637">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="14" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="45" selection-start="1869" selection-end="1869" vertical-scroll-proportion="-15.2" vertical-offset="200" max-vertical-offset="1160">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/assist/Cnd.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="0" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.5020862" vertical-offset="479" max-vertical-offset="1860">
+        <state line="10" column="3" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1880">
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Cnd#0" expanded="false" />
             <element signature="method#clearCache#0;class#Cnd#0" expanded="false" />
             <element signature="method#Cnd#1;class#Cnd#0" expanded="false" />
@@ -1271,7 +1343,8 @@
             <element signature="method#where#3;class#Cnd#0" expanded="false" />
             <element signature="method#where#4;class#Cnd#0" expanded="false" />
             <element signature="method#where#5;class#Cnd#0" expanded="false" />
-            <element signature="method#and#0;class#Cnd#0" expanded="false" />
+            <element signature="method#andIn#0;class#Cnd#0" expanded="false" />
+            <element signature="method#andNotIn#0;class#Cnd#0" expanded="false" />
             <element signature="method#and#1;class#Cnd#0" expanded="false" />
             <element signature="method#and#2;class#Cnd#0" expanded="false" />
             <element signature="method#and#3;class#Cnd#0" expanded="false" />
@@ -1280,7 +1353,7 @@
             <element signature="method#orIn#0;class#Cnd#0" expanded="false" />
             <element signature="method#orNotIn#0;class#Cnd#0" expanded="false" />
             <element signature="method#repackMessengersForOr#0;class#Cnd#0" expanded="false" />
-            <element signature="e#4389#4444#0" expanded="false" />
+            <element signature="e#4414#4469#0" expanded="false" />
             <element signature="method#or#2;class#Cnd#0" expanded="false" />
             <element signature="method#or#3;class#Cnd#0" expanded="false" />
             <element signature="method#asc#0;class#Cnd#0" expanded="false" />
@@ -1298,13 +1371,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/annotation/Name.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="34" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/test/pojo/Pet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="26" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="820">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/core/Dao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="0" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="2920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/test/MainModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="48" selection-start="820" selection-end="820" vertical-scroll-proportion="0.73963135" vertical-offset="299" max-vertical-offset="980">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>HibernateDao:war exploded</last-edited>
+          <last-edited>HibernateDao:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

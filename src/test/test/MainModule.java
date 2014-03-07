@@ -35,6 +35,8 @@ public class MainModule {
 
         List<Pet> pets = dao.query(Pet.class, e);
 
+        Pet pet = dao.fetch(Pet.class, "100");
+
         return "success";
     }
 
