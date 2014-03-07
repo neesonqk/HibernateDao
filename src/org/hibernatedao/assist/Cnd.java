@@ -2,8 +2,7 @@ package org.hibernatedao.assist;
 
 import org.hibernate.criterion.*;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by Nesson on 2/28/14.
@@ -63,8 +62,13 @@ public class Cnd implements Condition{
         return this;
     }
 
-    public Cnd and(String column, String condition, Object[] values){
-        messengers.add(wrapMessenger(column, condition, values));
+    public Cnd andIn(String column, Object[] values){
+        messengers.add(wrapMessenger(column, "IN", values));
+        return this;
+    }
+
+    public Cnd andNotIn(String column, Objects[] values){
+        messengers.add(wrapMessenger(column, "NOT IN", values));
         return this;
     }
 
@@ -78,19 +82,19 @@ public class Cnd implements Condition{
         return this;
     }
 
+    public Cnd and(Condition condition){
+        for(Messenger messenger : condition.getMessages()){
+            messengers.add(messenger);
+        }
+        return this;
+    }
+
     public Cnd or(String column, String condition, Object value){
-        
+
         Criterion criterion = wrapCriterion(column, condition, value);
 
-        Conjunction conjunction = Restrictions.conjunction();
+        repackMessengersForOr(criterion);
 
-        for(Messenger messenger : messengers){
-            conjunction.add(messenger.criterion);
-        }
-
-        messengers.clear();
-
-        messengers.add(new Messenger(Restrictions.disjunction().add(criterion).add(conjunction)));
         return this;
     }
 
@@ -98,37 +102,79 @@ public class Cnd implements Condition{
 
         Conjunction conjunction = Restrictions.conjunction();
 
+        List<Order> orders = new ArrayList<>();
+
         for(Messenger messenger : messengers){
-            conjunction.add(messenger.criterion);
+            if(messenger.criterion != null){
+                conjunction.add(messenger.criterion);
+            }else{
+                orders.add(messenger.order);
+            }
         }
 
         Conjunction conjunction_or = Restrictions.conjunction();
 
         for(Messenger messenger : condition.getMessages()){
-            conjunction_or.add(messenger.criterion);
+            if(messenger.criterion != null){
+                conjunction_or.add(messenger.criterion);
+            }else{
+                orders.add(messenger.order);
+            }
         }
 
         messengers.clear();
 
         messengers.add(new Messenger(Restrictions.disjunction().add(conjunction).add(conjunction_or)));
 
+        for(Order o : orders){
+            messengers.add(new Messenger(o));
+        }
+
         return this;
     }
 
-    public Cnd or(String column, String condition, Object[] values){
+    public Cnd orIn(String column, Object[] values){
 
-        Criterion criterion = wrapCriterion(column, condition, values);
+        Criterion criterion = wrapCriterion(column, "IN", values);
+
+        repackMessengersForOr(criterion);
+
+        return this;
+    }
+
+    public Cnd orNotIn(String column, Objects[] values){
+
+        Criterion criterion = wrapCriterion(column, "NOT IN", values);
+
+        repackMessengersForOr(criterion);
+
+        return this;
+    }
+
+    private void repackMessengersForOr(Criterion c){
 
         Conjunction conjunction = Restrictions.conjunction();
 
+        List<Order> orders = new ArrayList<>();
+
+        //fix bug, or condition conflicts with desc and asc and
+        //makes order information lost
         for(Messenger messenger : messengers){
-            conjunction.add(messenger.criterion);
+            if(messenger.criterion != null){
+                conjunction.add(messenger.criterion);
+            }else{
+                orders.add(messenger.order);
+            }
         }
 
         messengers.clear();
 
-        messengers.add(new Messenger(Restrictions.disjunction().add(criterion).add(conjunction)));
-        return this;
+        messengers.add(new Messenger(Restrictions.disjunction().add(c).add(conjunction)));
+
+        //bug fixed, order information lost
+        for(Order o : orders){
+            messengers.add(new Messenger(o));
+        }
     }
 
     public Cnd or(String column, String condition, String value, Character escapeChar, boolean ignoreCase){

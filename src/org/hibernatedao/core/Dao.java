@@ -4,13 +4,11 @@ import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Projections;
-import org.hibernatedao.assist.CndTool;
 import org.hibernatedao.assist.Condition;
 import org.hibernatedao.assist.Messenger;
 import org.hibernatedao.assist.Page;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import test.test.pojo.Pet;
 
 import javax.annotation.Resource;
 import java.lang.annotation.Annotation;

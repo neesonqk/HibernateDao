@@ -11,6 +11,12 @@ import javax.persistence.*;
 @Table(name = "pet")
 public class Pet {
 
+    public Pet(){}
+
+    public Pet(String name){
+        this.name = name;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;

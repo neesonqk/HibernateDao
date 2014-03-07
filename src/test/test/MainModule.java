@@ -11,6 +11,7 @@ import test.test.pojo.Pet;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Nesson on 12/19/13.
@@ -26,33 +27,15 @@ public class MainModule {
     @RequestMapping({"/create", "/", "/index"})
     public @ResponseBody String Test() {
 
-        Condition c = Cnd.where("id", ">", 250).desc("id");
+        Condition c = Cnd.where("id", ">", 650).desc("id");
 
-        List<Pet> pets = dao.query(Pet.class, c);
+        Condition d = Cnd.where("id", "<", 760);
 
-        Pet pet = dao.fetch(Pet.class, Cnd.where("id", ">", 250).and("name", "=", "99"));
+        Condition e = Cnd.where(c).and(d);
 
-
-        //dao.delete(pet);
-
-        dao.fetch(Pet.class, "99");// String primary key, use @Name and @Column(unique = true) annotate class field.
-
-        List<Pet> pets1 = dao.query(Pet.class, Cnd.where("id", ">", 250).or("id", "<", 170).or("name","=","15").and("name","=","99"));
-
-        List<Pet> pets2 = dao.query(Pet.class, Cnd.where("name", "like", "9%"));
-
-        List<Pet> pets3 = dao.query(Pet.class, Cnd.where("name", "not in", new String[]{"77","88"}).desc("id"));
-
-        Condition condition = Cnd.where("id", ">", 200).and("id", "<", 220);
-
-        Condition condition1 = Cnd.where("id", ">", 250).and("id", "<", 260);
-
-        Condition condition2 = Cnd.where(condition).or(condition1);
-
-        List<Pet> pets22 = dao.query(Pet.class, condition2);
+        List<Pet> pets = dao.query(Pet.class, e);
 
         return "success";
     }
-
 
 }
