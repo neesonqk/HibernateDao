@@ -38,12 +38,15 @@ public class Dao {
     }
 
     public <T> void delete(Class<T> c, Integer id) {
-
         T toBeDeletedObj = this.fetch(c, id);
-
         sessionFactory.getCurrentSession().delete(toBeDeletedObj);
     }
 
+    public <T> void delete(List<T> os){
+        for(T t : os){
+            this.delete(t);
+        }
+    }
 
     public <T> void update(final T o) {
         sessionFactory.getCurrentSession().update(o);
