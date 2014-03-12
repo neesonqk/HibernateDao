@@ -243,16 +243,16 @@ public class Cnd implements Condition{
 
     private Criterion wrapCriterion(String column, String condition, Object[] values){
 
-        if(values == null || values.length == 0){
-            return Restrictions.sqlRestriction("(1=0)");
-        }
-
         switch (condition.toUpperCase()){
             case "IN" :
-                return Restrictions.in(column, values);
+                return (values == null || values.length == 0)
+                        ? Restrictions.sqlRestriction("(1=0)")
+                        : Restrictions.in(column, values);
 
             case "NOT IN":
-                return Restrictions.not(Restrictions.in(column, values));
+                return (values == null || values.length == 0)
+                        ? Restrictions.sqlRestriction("(1=1)")
+                        : Restrictions.not(Restrictions.in(column, values));
         }
 
         return null;

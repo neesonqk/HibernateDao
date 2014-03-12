@@ -9,8 +9,6 @@
     <list default="true" id="e04af284-494b-4593-81fc-27be8abe6b7c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hibernatedao/assist/Cnd.java" afterPath="$PROJECT_DIR$/src/org/hibernatedao/assist/Cnd.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hibernatedao/core/Dao.java" afterPath="$PROJECT_DIR$/src/org/hibernatedao/core/Dao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/test/MainModule.java" afterPath="$PROJECT_DIR$/src/test/test/MainModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hibernatedao/annotation/Name.java" afterPath="$PROJECT_DIR$/src/org/hibernatedao/annotation/Name.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HibernateDao.iws" />
@@ -66,23 +64,7 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/test/test/MainModule.java" line="39" class="test.test.MainModule" package="test.test">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -92,57 +74,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Cnd.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Cnd.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/assist/Cnd.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="3" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1880">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#Cnd#0" expanded="false" />
-                <element signature="method#clearCache#0;class#Cnd#0" expanded="false" />
-                <element signature="method#Cnd#1;class#Cnd#0" expanded="false" />
-                <element signature="method#where#0;class#Cnd#0" expanded="false" />
-                <element signature="method#where#1;class#Cnd#0" expanded="false" />
-                <element signature="method#where#2;class#Cnd#0" expanded="false" />
-                <element signature="method#where#3;class#Cnd#0" expanded="false" />
-                <element signature="method#where#4;class#Cnd#0" expanded="false" />
-                <element signature="method#where#5;class#Cnd#0" expanded="false" />
-                <element signature="method#andIn#0;class#Cnd#0" expanded="false" />
-                <element signature="method#andNotIn#0;class#Cnd#0" expanded="false" />
-                <element signature="method#and#1;class#Cnd#0" expanded="false" />
-                <element signature="method#and#2;class#Cnd#0" expanded="false" />
-                <element signature="method#and#3;class#Cnd#0" expanded="false" />
-                <element signature="method#or#0;class#Cnd#0" expanded="false" />
-                <element signature="method#or#1;class#Cnd#0" expanded="false" />
-                <element signature="method#orIn#0;class#Cnd#0" expanded="false" />
-                <element signature="method#orNotIn#0;class#Cnd#0" expanded="false" />
-                <element signature="method#repackMessengersForOr#0;class#Cnd#0" expanded="false" />
-                <element signature="e#4414#4469#0" expanded="false" />
-                <element signature="method#or#2;class#Cnd#0" expanded="false" />
-                <element signature="method#or#3;class#Cnd#0" expanded="false" />
-                <element signature="method#asc#0;class#Cnd#0" expanded="false" />
-                <element signature="method#desc#0;class#Cnd#0" expanded="false" />
-                <element signature="method#setMessengers#1;class#Cnd#0" expanded="false" />
-                <element signature="method#setMessengers#2;class#Cnd#0" expanded="false" />
-                <element signature="method#setMessengers#3;class#Cnd#0" expanded="false" />
-                <element signature="method#wrapMessenger#0;class#Cnd#0" expanded="false" />
-                <element signature="method#wrapMessenger#1;class#Cnd#0" expanded="false" />
-                <element signature="method#wrapMessengerForLike#0;class#Cnd#0" expanded="false" />
-                <element signature="method#wrapCriterion#0;class#Cnd#0" expanded="false" />
-                <element signature="method#wrapCriterion#1;class#Cnd#0" expanded="false" />
-                <element signature="method#finalize#0;class#Cnd#0" expanded="false" />
-              </folding>
+            <state line="251" column="26" selection-start="7523" selection-end="7523" vertical-scroll-proportion="0.6167401" vertical-offset="4440" max-vertical-offset="5880">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainModule.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainModule.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/test/MainModule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="48" selection-start="820" selection-end="820" vertical-scroll-proportion="0.73963135" vertical-offset="299" max-vertical-offset="980">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="34" column="0" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="980">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,7 +95,7 @@
       <file leaf-file-name="Dao.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/core/Dao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="0" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="2920">
+            <state line="58" column="0" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.0" vertical-offset="1160" max-vertical-offset="3140">
               <folding />
             </state>
           </provider>
@@ -159,7 +104,7 @@
       <file leaf-file-name="Name.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/annotation/Name.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="34" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400">
+            <state line="8" column="34" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="400">
               <folding />
             </state>
           </provider>
@@ -168,10 +113,8 @@
       <file leaf-file-name="Pet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/test/pojo/Pet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="26" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="820">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="24" column="26" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="980">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -179,7 +122,7 @@
       <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="14" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
+            <state line="10" column="14" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="460">
               <folding />
             </state>
           </provider>
@@ -188,7 +131,7 @@
       <file leaf-file-name="dispatcher-servlet.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="45" selection-start="1869" selection-end="1869" vertical-scroll-proportion="-15.2" vertical-offset="200" max-vertical-offset="1160">
+            <state line="29" column="45" selection-start="1869" selection-end="1869" vertical-scroll-proportion="0.0" vertical-offset="580" max-vertical-offset="1160">
               <folding />
             </state>
           </provider>
@@ -227,11 +170,11 @@
         <option value="$PROJECT_DIR$/src/org/hibernatedao/assist/Messenger.java" />
         <option value="$PROJECT_DIR$/src/org/hibernatedao/assist/Condition.java" />
         <option value="$PROJECT_DIR$/src/org/hibernatedao/assist/CndTool.java" />
-        <option value="$PROJECT_DIR$/src/org/hibernatedao/assist/Cnd.java" />
         <option value="$PROJECT_DIR$/src/test/test/MainModule.java" />
         <option value="$PROJECT_DIR$/src/org/hibernatedao/annotation/Name.java" />
         <option value="$PROJECT_DIR$/src/test/test/pojo/Pet.java" />
         <option value="$PROJECT_DIR$/src/org/hibernatedao/core/Dao.java" />
+        <option value="$PROJECT_DIR$/src/org/hibernatedao/assist/Cnd.java" />
       </list>
     </option>
   </component>
@@ -349,6 +292,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -555,7 +499,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -923,11 +866,14 @@
       <workItem from="1393812417600" duration="7265000" />
       <workItem from="1393827366567" duration="11982000" />
       <workItem from="1394156255799" duration="13499000" />
+      <workItem from="1394260676959" duration="1299000" />
+      <workItem from="1394603027968" duration="279000" />
+      <workItem from="1394603327847" duration="189000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109815000" />
+    <option name="totallyTimeSpent" value="111582000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -950,7 +896,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1552" height="842" extended-state="6" />
+    <frame x="-8" y="-8" width="1552" height="842" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -975,7 +921,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32957748" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1997319" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1997319" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5084507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -983,37 +929,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.085365854" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32957748" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32957748" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32957748" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32957748" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1997319" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5084507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.085365854" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34788734" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.061971832" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1070,9 +985,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/test/MainModule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="25" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0" vertical-offset="925" max-vertical-offset="1875">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1113,9 +1026,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/test/MainModule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="25" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0" vertical-offset="925" max-vertical-offset="1875">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1163,9 +1074,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/test/MainModule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="0" selection-start="855" selection-end="855" vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="1725">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1213,9 +1122,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/test/MainModule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="0" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="900">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1275,30 +1182,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/assist/Condition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="1" selection-start="284" selection-end="284" vertical-scroll-proportion="0.30598053" vertical-offset="0" max-vertical-offset="719">
-          <folding />
-        </state>
+        <state line="14" column="1" selection-start="284" selection-end="284" vertical-scroll-proportion="0.30598053" vertical-offset="0" max-vertical-offset="719" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_51/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="634" column="0" selection-start="23203" selection-end="23203" vertical-scroll-proportion="0.33184856" vertical-offset="12071" max-vertical-offset="23100">
-          <folding />
-        </state>
+        <state line="634" column="0" selection-start="23203" selection-end="23203" vertical-scroll-proportion="0.33184856" vertical-offset="12071" max-vertical-offset="23100" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/cglib-nodep-2.2.jar!/net/sf/cglib/proxy/MethodProxy.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="28" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.35279804" vertical-offset="455" max-vertical-offset="1120">
-          <folding />
-        </state>
+        <state line="31" column="28" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.35279804" vertical-offset="455" max-vertical-offset="1120" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/assist/EscapeLikeExpress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="400">
-          <folding />
-        </state>
+        <state line="6" column="3" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="400" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/assist/Messenger.java">
@@ -1310,9 +1209,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="637">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="637" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
@@ -1324,50 +1221,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="45" selection-start="1869" selection-end="1869" vertical-scroll-proportion="-15.2" vertical-offset="200" max-vertical-offset="1160">
+        <state line="29" column="45" selection-start="1869" selection-end="1869" vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="1160">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/assist/Cnd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="3" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1880">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Cnd#0" expanded="false" />
-            <element signature="method#clearCache#0;class#Cnd#0" expanded="false" />
-            <element signature="method#Cnd#1;class#Cnd#0" expanded="false" />
-            <element signature="method#where#0;class#Cnd#0" expanded="false" />
-            <element signature="method#where#1;class#Cnd#0" expanded="false" />
-            <element signature="method#where#2;class#Cnd#0" expanded="false" />
-            <element signature="method#where#3;class#Cnd#0" expanded="false" />
-            <element signature="method#where#4;class#Cnd#0" expanded="false" />
-            <element signature="method#where#5;class#Cnd#0" expanded="false" />
-            <element signature="method#andIn#0;class#Cnd#0" expanded="false" />
-            <element signature="method#andNotIn#0;class#Cnd#0" expanded="false" />
-            <element signature="method#and#1;class#Cnd#0" expanded="false" />
-            <element signature="method#and#2;class#Cnd#0" expanded="false" />
-            <element signature="method#and#3;class#Cnd#0" expanded="false" />
-            <element signature="method#or#0;class#Cnd#0" expanded="false" />
-            <element signature="method#or#1;class#Cnd#0" expanded="false" />
-            <element signature="method#orIn#0;class#Cnd#0" expanded="false" />
-            <element signature="method#orNotIn#0;class#Cnd#0" expanded="false" />
-            <element signature="method#repackMessengersForOr#0;class#Cnd#0" expanded="false" />
-            <element signature="e#4414#4469#0" expanded="false" />
-            <element signature="method#or#2;class#Cnd#0" expanded="false" />
-            <element signature="method#or#3;class#Cnd#0" expanded="false" />
-            <element signature="method#asc#0;class#Cnd#0" expanded="false" />
-            <element signature="method#desc#0;class#Cnd#0" expanded="false" />
-            <element signature="method#setMessengers#1;class#Cnd#0" expanded="false" />
-            <element signature="method#setMessengers#2;class#Cnd#0" expanded="false" />
-            <element signature="method#setMessengers#3;class#Cnd#0" expanded="false" />
-            <element signature="method#wrapMessenger#0;class#Cnd#0" expanded="false" />
-            <element signature="method#wrapMessenger#1;class#Cnd#0" expanded="false" />
-            <element signature="method#wrapMessengerForLike#0;class#Cnd#0" expanded="false" />
-            <element signature="method#wrapCriterion#0;class#Cnd#0" expanded="false" />
-            <element signature="method#wrapCriterion#1;class#Cnd#0" expanded="false" />
-            <element signature="method#finalize#0;class#Cnd#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1381,25 +1236,28 @@
     <entry file="file://$PROJECT_DIR$/src/test/test/pojo/Pet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="26" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="820">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/core/Dao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="0" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="2920">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/test/MainModule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="48" selection-start="820" selection-end="820" vertical-scroll-proportion="0.73963135" vertical-offset="299" max-vertical-offset="980">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="34" column="0" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0" vertical-offset="276" max-vertical-offset="980">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/core/Dao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="0" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2820">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hibernatedao/assist/Cnd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="251" column="26" selection-start="7523" selection-end="7523" vertical-scroll-proportion="0.6167401" vertical-offset="4440" max-vertical-offset="5880">
+          <folding />
         </state>
       </provider>
     </entry>

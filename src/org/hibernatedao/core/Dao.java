@@ -28,11 +28,6 @@ public class Dao {
     @Resource(name = "sessionFactory")
     public SessionFactory sessionFactory;
 
-    protected Dao dao;
-
-    public Dao() {
-        dao = this;
-    }
 
     public <T> void insert(final T o) {
         sessionFactory.getCurrentSession().save(o);
