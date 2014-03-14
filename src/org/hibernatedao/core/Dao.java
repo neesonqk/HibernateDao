@@ -3,6 +3,7 @@ package org.hibernatedao.core;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
 import org.hibernatedao.annotation.Name;
 import org.hibernatedao.assist.Condition;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import javax.persistence.Id;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -150,5 +152,33 @@ public class Dao {
         }
 
         return (T) cri.uniqueResult();
+    }
+
+    public <T> T last(Class<T> c, Condition cnd){
+
+        Criteria cri = sessionFactory.getCurrentSession().createCriteria(c);
+
+        if(cnd != null)
+        for (Messenger msg : cnd.getMessages()) {
+            if (msg.criterion != null) cri.add(msg.criterion);
+            if (msg.order != null) cri.addOrder(msg.order);
+        }
+
+        cri.setMaxResults(1);
+
+        for(Field f : c.getDeclaredFields()){
+            if( null != f.getAnnotation(Id.class)){
+                cri.addOrder(Order.desc(f.getName()));
+                return (T) cri.uniqueResult();
+            }
+        }
+
+        cri.addOrder(Order.desc("id"));
+
+        return (T) cri.uniqueResult();
+    }
+
+    public <T> T last(Class<T> c){
+        return this.last(c, null);
     }
 }
