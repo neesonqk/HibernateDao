@@ -213,6 +213,13 @@ public class Cnd implements Condition{
         return this;
     }
 
+    //for limit conditon
+    public Cnd limit(Integer max){
+        messengers.add(new Messenger(max));
+        return this;
+    }
+
+
     private Cnd setMessengers(String column, String condition, Object value){
         messengers.add(wrapMessenger(column, condition, value));
         return this;
@@ -228,6 +235,7 @@ public class Cnd implements Condition{
         messengers.add(wrapMessengerForLike(column, value, escapeChar, ignoreCase));
         return this;
     }
+
 
     private Messenger wrapMessenger(String column, String condition, Object[] values){
         return new Messenger(this.wrapCriterion(column, condition, values));

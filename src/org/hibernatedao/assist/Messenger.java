@@ -14,7 +14,13 @@ public class Messenger {
     public Messenger(Order o){
         order = o;
     }
+    public Messenger(Integer max){
+        this.max = max;
+    }
     public Messenger(){}
 	public Order order = null;
 	public Criterion criterion = null;
+
+    //Criteria setMaxResults(...)
+    public Integer max = null;
 }

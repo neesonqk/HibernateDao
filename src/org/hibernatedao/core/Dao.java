@@ -120,6 +120,7 @@ public class Dao {
             for (Messenger msg : cnd.getMessages()) {
                 if (msg.criterion != null) cri.add(msg.criterion);
                 if (msg.order != null) cri.addOrder(msg.order);
+                if (msg.max != null) cri.setMaxResults(msg.max);
             }
 
         if (page != null) {
