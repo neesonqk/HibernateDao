@@ -30,7 +30,6 @@ public class Dao {
     @Resource(name = "sessionFactory")
     public SessionFactory sessionFactory;
 
-
     public <T> void insert(final T o) {
         sessionFactory.getCurrentSession().save(o);
     }
@@ -51,7 +50,7 @@ public class Dao {
     }
 
     public <T> void update(final T o) {
-        sessionFactory.getCurrentSession().update(o);
+        sessionFactory.getCurrentSession().saveOrUpdate(o);
     }
 
     public <T> T fetch(Class<T> c, long id) {
