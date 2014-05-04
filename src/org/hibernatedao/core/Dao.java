@@ -54,6 +54,10 @@ public class Dao {
         sessionFactory.getCurrentSession().update(o);
     }
 
+    public <T> void saveOrUpdate(final T o) {
+        sessionFactory.getCurrentSession().saveOrUpdate(o);
+    }
+
     public <T> T fetch(Class<T> c, long id) {
         return (T) this.sessionFactory.getCurrentSession().get(c, id);
     }
