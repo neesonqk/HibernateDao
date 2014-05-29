@@ -183,6 +183,22 @@ public class Dao {
         return (T) cri.uniqueResult();
     }
 
+    public <T> Criteria convertToCriteria(Class<T> c, Condition cnd){
+
+        Criteria cri = sessionFactory.getCurrentSession().createCriteria(c);
+
+        for (Messenger msg : cnd.getMessages()) {
+            if (msg.criterion != null) cri.add(msg.criterion);
+            if (msg.order != null) cri.addOrder(msg.order);
+        }
+
+        return cri;
+    }
+
+    public <T> List<T> query(Criteria criteria){
+        return criteria.list();
+    }
+
     public <T> T last(Class<T> c){
         return this.last(c, null);
     }
