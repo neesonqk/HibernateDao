@@ -4,3 +4,7 @@
 *.jar
 *.war
 *.ear
+.idea/
+out/artifacts/HibernateDao_war_exploded/WEB-INF/datasource.xml
+src/test/test/MainModule.java
+web/WEB-INF/datasource.xml

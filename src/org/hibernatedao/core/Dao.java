@@ -53,6 +53,10 @@ public class Dao {
         sessionFactory.getCurrentSession().saveOrUpdate(o);
     }
 
+    public <T> void saveOrUpdate(final T o) {
+        sessionFactory.getCurrentSession().saveOrUpdate(o);
+    }
+
     public <T> T fetch(Class<T> c, long id) {
         return (T) this.sessionFactory.getCurrentSession().get(c, id);
     }
@@ -176,6 +180,22 @@ public class Dao {
         cri.addOrder(Order.desc("id"));
 
         return (T) cri.uniqueResult();
+    }
+
+    public <T> Criteria convertToCriteria(Class<T> c, Condition cnd){
+
+        Criteria cri = sessionFactory.getCurrentSession().createCriteria(c);
+
+        for (Messenger msg : cnd.getMessages()) {
+            if (msg.criterion != null) cri.add(msg.criterion);
+            if (msg.order != null) cri.addOrder(msg.order);
+        }
+
+        return cri;
+    }
+
+    public <T> List<T> query(Criteria criteria){
+        return criteria.list();
     }
 
     public <T> T last(Class<T> c){
